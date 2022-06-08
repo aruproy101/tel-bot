@@ -300,11 +300,11 @@ async function getTotal(username) {
     
 }
 
-cron.schedule("*/4 * * * *", getAllStats)
+// cron.schedule("*/4 * * * *", getAllStats)
 // cron.schedule("*/10 * * * *", getAllStats)
 
 // setInterval(getAllStats, 60000)
 
-
+module.exports = bot
 
 bot.launch()
