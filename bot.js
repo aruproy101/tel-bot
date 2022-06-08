@@ -1,10 +1,10 @@
 const {Telegraf} = require('telegraf')
-const puppeteer = require('puppeteer')
+// const puppeteer = require('puppeteer')
 const fs = require('fs/promises')
 const axios = require("axios")
 const cron = require("node-cron")
 const path = require("path")
-const { resolve } = require('path')
+// const { resolve } = require('path')
 
 // const bot = new Telegraf('5366273598:AAF11_4fUX3EtFnFrvDay7c8R6pitAZRrZU')
 const bot = new Telegraf('5579848968:AAEYcT5EU1iVXUE20NcuAgwA4_Ztv7GD2Yg')
