@@ -149,18 +149,18 @@ async function getAllStats() {
 }
 
 
-bot.use((ctx, next) => {
-    console.log(ctx.chat)
-    console.log(ctx.from)
-    console.log(ctx.updateType)
-    // if(ctx.updateSubTypes[0] == "text") {
-    //     console.log(ctx.from.username + " said" + ctx.message.text)
-    // } else {
-    //     console.log(ctx.from.username + " sent" + ctx.updateSubTypes[0])
-    // }
+// bot.use((ctx, next) => {
+//     console.log(ctx.chat)
+//     console.log(ctx.from)
+//     console.log(ctx.updateType)
+//     // if(ctx.updateSubTypes[0] == "text") {
+//     //     console.log(ctx.from.username + " said" + ctx.message.text)
+//     // } else {
+//     //     console.log(ctx.from.username + " sent" + ctx.updateSubTypes[0])
+//     // }
 
-    next() // move to the next functions
-})
+//     next() // move to the next functions
+// })
 
 bot.start(ctx => {
     ctx.reply("Welcome to our bot")
