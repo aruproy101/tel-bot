@@ -4,10 +4,13 @@ const fs = require('fs/promises')
 const axios = require("axios")
 const cron = require("node-cron")
 const path = require("path")
+const dotenv = require("dotenv").config()
 // const { resolve } = require('path')
 
 // const bot = new Telegraf('5366273598:AAF11_4fUX3EtFnFrvDay7c8R6pitAZRrZU')
-const bot = new Telegraf('5579848968:AAEYcT5EU1iVXUE20NcuAgwA4_Ztv7GD2Yg')
+const bot = new Telegraf(process.env.TOKEN)
+
+
 
 
 //  start command - /start
@@ -146,7 +149,7 @@ async function getAllStats() {
 }
 
 
-/* bot.use((ctx, next) => {
+bot.use((ctx, next) => {
     console.log(ctx.chat)
     console.log(ctx.from)
     console.log(ctx.updateType)
@@ -157,7 +160,7 @@ async function getAllStats() {
     // }
 
     next() // move to the next functions
-}) */
+})
 
 bot.start(ctx => {
     ctx.reply("Welcome to our bot")
@@ -303,7 +306,6 @@ async function getTotal(username) {
 // cron.schedule("*/4 * * * *", getAllStats)
 // cron.schedule("*/10 * * * *", getAllStats)
 
-// setInterval(getAllStats, 60000)
 
 module.exports = bot
 
