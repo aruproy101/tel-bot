@@ -42,7 +42,8 @@ let usernames = {
     rajdeep : "code_fu_panda",
     dibyabrata : "chikzz",
     isika : "isika_1",
-    sanghita : "rimpa1"
+    sanghita : "rimpa1",
+    nidhi: "29nidhishah"
 }
 
 const delay = async (ms = 10000) => new Promise(resolve => setTimeout(resolve, ms))
@@ -220,6 +221,24 @@ bot.command("naskar", async (ctx) => {
 bot.command("soumabha", async (ctx) => {
     try {
     const mreply = await getStats("aruproyfriend", "Soumabha Ghosh")
+    ctx.reply(mreply)
+    } catch(e) {
+        ctx.reply("There is a problem, please try after some time")
+    }
+})
+
+bot.command("isika", async (ctx) => {
+    try {
+    const mreply = await getStats(usernames[isika], "Isika Samanta")
+    ctx.reply(mreply)
+    } catch(e) {
+        ctx.reply("There is a problem, please try after some time")
+    }
+})
+
+bot.command("nidhi", async (ctx) => {
+    try {
+    const mreply = await getStats(usernames[nidhi], "Nidhi Shah")
     ctx.reply(mreply)
     } catch(e) {
         ctx.reply("There is a problem, please try after some time")
