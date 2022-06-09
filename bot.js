@@ -229,7 +229,7 @@ bot.command("soumabha", async (ctx) => {
 
 bot.command("isika", async (ctx) => {
     try {
-    const mreply = await getStats(usernames[isika], "Isika Samanta")
+    const mreply = await getStats("isika_1", "Isika Samanta")
     ctx.reply(mreply)
     } catch(e) {
         ctx.reply("There is a problem, please try after some time")
@@ -238,7 +238,7 @@ bot.command("isika", async (ctx) => {
 
 bot.command("nidhi", async (ctx) => {
     try {
-    const mreply = await getStats(usernames[nidhi], "Nidhi Shah")
+    const mreply = await getStats("29nidhishah", "Nidhi Shah")
     ctx.reply(mreply)
     } catch(e) {
         ctx.reply("There is a problem, please try after some time")
